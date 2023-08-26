@@ -17,23 +17,42 @@ The kmeans.c program showcases the k-means clustering algorithm. It reads data p
 Each program includes comments to explain the code's functionality and usage. To compile and run these programs, make sure you have a C compiler installed on your system.
 
 **output**
+
 $ ./client -ip 127.0.0.1 -p 9999
+
 Connected to server
+
 Enter a command for the server: matinvpar -n 8 -I fast -P 1
+
 Received the solution: matinv_client1_soln1.txt
+
 Enter a command for the server: matinvpar -n 2048 -I rand -P 1
+
 Received the solution: matinv_client1_soln2.txt
+
 Enter a command for the server: kmeanspar -f kmeans-data.txt -k 9
+
 Received the solution: kmeans_client1_soln1.txt
 
 Meanwhile the command line of the server will look as follows.
+
 $ ./server 9999
+
 Listening for clients...
+
 Connected with client 1
+
 Client 1 commanded: matinvpar -n 8 -I fast -P 1
+
 Sending solution: matinv_client1_soln1.txt
+
 Client 1 commanded: matinvpar -n 2048 -I rand -P 1
+
 Sending solution: matinv_client1_soln2.txt
+
 Client 1 commanded: kmeanspar -f kmeans-data.txt -k 9
+
 Sending solution: kmeans_client1_soln1.txt
+
+
 
